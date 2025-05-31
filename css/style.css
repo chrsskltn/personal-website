@@ -1,22 +1,50 @@
-/* Make sure the body and html take up full height and have no default margin */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.image-container {
+/* Basic styling for the body to center content (optional) */
+body {
+    font-family: Arial, sans-serif; /* Choose a font you like */
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;    /* Centers vertically */
-    height: 100vh;          /* Makes the container take the full viewport height */
-    /* You can add a background color to see the container if needed */
-    /* background-color: #f0f0f0; */
+    flex-direction: column; /* Stack header and other content vertically */
+    align-items: center;    /* Center content horizontally */
+    /* justify-content: center; /* Uncomment this if you want vertical centering of all body content */
+    /* min-height: 100vh; /* Use this with justify-content: center for full vertical centering */
+    margin: 0;
+    padding: 20px; /* Add some padding around the content */
+    text-align: center; /* Center text within elements */
+    background-color: #f4f4f4; /* A light background color */
+    color: #333; /* Default text color */
 }
 
-.image-container img {
-    max-width: 90%;   /* Optional: Prevents image from being wider than its container */
-    max-height: 90vh; /* Optional: Prevents image from being taller than viewport height */
-    /* You can add other styles to the image itself, like a border */
-    /* border: 2px solid #333; */
+.main-header {
+    margin-bottom: 30px; /* Space below the header */
 }
+
+.main-header h1 {
+    font-size: 3em;  /* Adjust size as needed */
+    margin-bottom: 10px; /* Space below the main heading */
+    color: #2c3e50; /* A darker color for the main heading */
+}
+
+.subheading {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: #7f8c8d;   /* A slightly lighter color for the subheading */
+    height: 1.8em; /* Set a fixed height to prevent layout jumps, adjust based on font size */
+    display: inline-block; /* Allows cursor to be next to text */
+}
+
+/* Blinking cursor effect for the animated subheading */
+.subheading::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    margin-left: 5px; /* Space between text and cursor */
+    color: #7f8c8d; /* Cursor color */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
