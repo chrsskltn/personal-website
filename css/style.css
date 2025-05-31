@@ -1,0 +1,22 @@
+/* Make sure the body and html take up full height and have no default margin */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 100vh;          /* Makes the container take the full viewport height */
+    /* You can add a background color to see the container if needed */
+    /* background-color: #f0f0f0; */
+}
+
+.image-container img {
+    max-width: 90%;   /* Optional: Prevents image from being wider than its container */
+    max-height: 90vh; /* Optional: Prevents image from being taller than viewport height */
+    /* You can add other styles to the image itself, like a border */
+    /* border: 2px solid #333; */
+}
