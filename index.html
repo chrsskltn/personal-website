@@ -4,41 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Skelton</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="main-header"></header>
-    <h1>chrsskltn</h1>
-    <p id="animated-subheading" class="subheading"></p>
+    <header class="main-header">
+        <h1>chrsskltn</h1>
+        <p id="animated-subheading" class="subheading" aria-live="polite"></p>
     </header>
 
     <main>
-     <section id="about" class="content-section">
-            
-           
-        </section>
-
-       
-<!--
-        <section id="contact" class="content-section">
-            <h2>Get In Touch</h2>
-            <p></p>
-            <div class="contact-links">
-                <a href="https://github.com/chrsskltn" class="button contact-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https:/www.linkedin.com/in/chris-skelton-89a02815b/" class="button contact-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
+        <section id="about" class="content-section">
+            <div class="game-container">
+                <canvas id="pongCanvas" width="800" height="400" aria-label="Animated paddle game"></canvas>
+            </div>
         </section>
     </main>
--->
+
     <footer>
         <p>&copy; <span id="current-year"></span> chrsskltn. All rights reserved.</p>
     </footer>
 
-
-
-
-    <script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 </body>
 </html>
