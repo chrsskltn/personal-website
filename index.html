@@ -3,42 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Skelton</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Chris Skelton | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header class="main-header"></header>
-    <h1>chrsskltn</h1>
-    <p id="animated-subheading" class="subheading"></p>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="logo" href="#home">chrsskltn</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+            <nav class="site-nav" id="primary-navigation" aria-label="Primary">
+                <ul class="nav-list" data-visible="false">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-     <section id="about" class="content-section">
-            
-           
+        <section id="home" class="section hero">
+            <div class="container hero__content">
+                <div class="hero__text">
+                    <p class="eyebrow">Hello, I'm Chris</p>
+                    <h1>Building purposeful digital experiences with curiosity and care.</h1>
+                    <p class="lead">I craft thoughtful interfaces, clean code, and engaging user journeys. <span id="animated-subheading" class="typed-text" aria-live="polite"></span></p>
+                    <div class="cta-group">
+                        <a class="button button--primary" href="#projects">View my work</a>
+                        <a class="button button--ghost" href="#contact">Let's collaborate</a>
+                    </div>
+                </div>
+                <figure class="hero__media">
+                    <img src="images/profile.jpg" alt="Portrait of Chris Skelton" loading="lazy">
+                </figure>
+            </div>
         </section>
 
-       
-<!--
-        <section id="contact" class="content-section">
-            <h2>Get In Touch</h2>
-            <p></p>
-            <div class="contact-links">
-                <a href="https://github.com/chrsskltn" class="button contact-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https:/www.linkedin.com/in/chris-skelton-89a02815b/" class="button contact-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Projects</h2>
+                    <p class="section-lead">A curated selection of recent work spanning product design, frontend engineering, and creative experimentation.</p>
                 </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <h3>Insightful Analytics Dashboard</h3>
+                            <p>A responsive dashboard for tracking campaign metrics in real time, complete with custom visualisations and light/dark theming.</p>
+                        </div>
+                        <ul class="project-card__meta">
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind</li>
+                        </ul>
+                        <a class="project-card__link" href="https://github.com/chrsskltn" target="_blank" rel="noopener noreferrer">Explore the repo</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <h3>Storytelling Portfolio</h3>
+                            <p>An immersive single-page site for a photographer featuring scroll-triggered animations, editorial typography, and lazy-loaded galleries.</p>
+                        </div>
+                        <ul class="project-card__meta">
+                            <li>GSAP</li>
+                            <li>SCSS</li>
+                            <li>Accessibility-first</li>
+                        </ul>
+                        <a class="project-card__link" href="https://github.com/chrsskltn" target="_blank" rel="noopener noreferrer">Read the case study</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <h3>Wellness Mobile Companion</h3>
+                            <p>A cross-platform mobile app to build mindful habits, complete with personalised routines, progress insights, and offline support.</p>
+                        </div>
+                        <ul class="project-card__meta">
+                            <li>React Native</li>
+                            <li>Expo</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <a class="project-card__link" href="https://github.com/chrsskltn" target="_blank" rel="noopener noreferrer">Discover the details</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container contact__layout">
+                <div class="section-heading">
+                    <h2>Contact</h2>
+                    <p class="section-lead">Have an idea, freelance brief, or role you’d like to collaborate on? I’d love to hear from you.</p>
+                </div>
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell me a little about your project" required></textarea>
+                    </div>
+                    <button class="button button--primary" type="submit">Send message</button>
+                    <p class="contact-note">Prefer email? Reach me at <a href="mailto:hello@chrsskltn.com">hello@chrsskltn.com</a>.</p>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
         </section>
     </main>
--->
-    <footer>
-        <p>&copy; <span id="current-year"></span> chrsskltn. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>&copy; <span id="current-year"></span> chrsskltn. Crafted with intention.</p>
+            <div class="social-links">
+                <a href="https://github.com/chrsskltn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/chris-skelton-89a02815b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
+            </div>
+        </div>
     </footer>
 
-
-
-
-    <script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 </body>
 </html>
